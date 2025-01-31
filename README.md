@@ -1,0 +1,4 @@
+# NullPointerException in Scala Generic Class
+This example demonstrates a common error in Scala involving NullPointerExceptions when using generic classes with null values.  The `MyClass` generic class accepts a type parameter `T`. When a null value is passed to this class and the `printValue` method tries to access the `value` field, a `NullPointerException` is thrown, even though the code compiles successfully.
+The solution involves either using a type that can handle null values (like `Option[T]`) or adding null checks within the `printValue` method.
+The `bug.scala` file contains the buggy code, while `bugSolution.scala` provides a corrected version.
